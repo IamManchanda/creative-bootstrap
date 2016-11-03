@@ -8,7 +8,7 @@ title: Portfolio
 			{% for portfolio_item in site.portfolio  %}
 				<div class="col-lg-4 col-sm-6">
 					<a href="{{ portfolio_item.link }}" class="portfolio-box">
-						<img src="{{ portfolio_item.image_path }}" class="img-responsive" alt="">
+						<img src="{{ site.baseurl }}/{{ portfolio_item.image_path }}" class="img-responsive" alt="">
 						<div class="portfolio-box-caption">
 							<div class="portfolio-box-caption-content">
 								<div class="project-category text-faded">
