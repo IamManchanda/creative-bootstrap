@@ -3,8 +3,18 @@ layout: page
 ---
 <section id="blog">
   <div class="container">
-    <div class="col-md-8 col-md-offset-2">
-      {{ content }}
-    </div>
+  	<div class="row">
+  		<div class="col-md-8 col-md-offset-2">
+	    	<div class="row">
+	    		<div class="col-md-6">
+	    			<p class="pull-left">Category: {{ page.category }}</p>
+	    		</div>
+	    		<div class="col-md-6">
+	    			<p class="pull-right">Date: {{ page.date | date: "%d %B %Y" }}</p>
+	    		</div>
+	    	</div>
+	      	{{ content }}
+	    </div>
+  	</div>
   </div>
 </section>

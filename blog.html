@@ -2,18 +2,24 @@
 layout: page
 title: Our Blogs
 ---
-
 <section>
 	<div class="container">
 		<div class="row">
 			<div class="col-md-8 col-md-offset-2">
-				<ul style="list-style-type: none">
+				<ul style="list-style-type: none;padding: 0px;">
 					{% for post in site.posts %}
 						<li>
 							<h2 class="text-center">
 								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
-								- {{ post.date | date: "%d %B %Y" }}
 							</h2>
+							<div class="row" style="margin-top: 30px;margin-bottom: 0px;">
+					    		<div class="col-md-6">
+					    			<p class="pull-left" style="margin-bottom: 0px;">Category: {{ post.category }}</p>
+					    		</div>
+					    		<div class="col-md-6">
+					    			<p class="pull-right" style="margin-bottom: 0px;">{{ post.date | date: "%d %B %Y" }}</p>
+					    		</div>
+					    	</div>
 							<p>
 								{{ post.content }}
 							</p>
