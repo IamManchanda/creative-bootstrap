@@ -1,0 +1,26 @@
+---
+layout: page
+title: Our Blogs
+---
+
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<ul style="list-style-type: none">
+					{% for post in site.posts %}
+						<li>
+							<h2 class="text-center">
+								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+								- {{ post.date | date: "%d %B %Y" }}
+							</h2>
+							<p>
+								{{ post.content }}
+							</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
