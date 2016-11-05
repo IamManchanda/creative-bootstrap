@@ -1,6 +1,7 @@
 url: https://iammanchanda.github.io
 gems:
   - jekyll-seo-tag
+  - jekyll-feed
 collections:
   portfolio:
 compress_html:
