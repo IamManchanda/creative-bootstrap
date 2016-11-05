@@ -13,18 +13,6 @@
 		<!-- Collect the nav links, forms, and other content for toggling -->
 		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 			<ul class="nav navbar-nav navbar-right">
-				<!-- <li>
-					<a href="{{ site.baseurl }}/about.html">About</a>
-				</li>
-				<li>
-					<a href="{{ site.baseurl }}/services.html">Services</a>
-				</li>
-				<li>
-					<a href="{{ site.baseurl }}/portfolio.html">Portfolio</a>
-				</li>
-				<li>
-					<a href="{{ site.baseurl }}/blog.html">Blog</a>
-				</li> -->
 				{% assign navigation_pages = site.html_pages | sort: 'navigation_weight' %}
 				{% for p in navigation_pages %}
 					{% if p.navigation_weight %}
