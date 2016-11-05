@@ -1,3 +1,6 @@
+url: https://iammanchanda.github.io/creative-bootstrap/
+gems:
+  - jekyll-seo-tag
 collections:
   portfolio:
 compress_html:
