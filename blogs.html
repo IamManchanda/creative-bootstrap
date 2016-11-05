@@ -1,0 +1,35 @@
+---
+layout: page
+title: Blogs
+navigation_weight: 5
+permalink: /blogs/
+description: Latest Blogs and updates from Creative Bootstrap
+---
+<section>
+	<div class="container">
+		<div class="row">
+			<div class="col-md-8 col-md-offset-2">
+				<ul style="list-style-type: none;padding: 0px;">
+					{% for post in site.posts %}
+						<li>
+							<h2 class="text-center">
+								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
+							</h2>
+							<div class="row" style="margin-top: 30px;margin-bottom: 0px;">
+					    		<div class="col-md-6">
+					    			<p class="pull-left" style="margin-bottom: 0px;">Category: {{ post.category }}</p>
+					    		</div>
+					    		<div class="col-md-6">
+					    			<p class="pull-right" style="margin-bottom: 0px;">Date: {{ post.date | date: "%d %B %Y" }}</p>
+					    		</div>
+					    	</div>
+							<p>
+								{{ post.content }}
+							</p>
+						</li>
+					{% endfor %}
+				</ul>
+			</div>
+		</div>
+	</div>
+</section>
