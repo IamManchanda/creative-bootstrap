@@ -1,3 +1,4 @@
+markdown: kramdown
 url: https://iammanchanda.github.io
 gems:
   - jekyll-seo-tag

@@ -475,3 +475,13 @@ img::-moz-selection {
 body {
     webkit-tap-highlight-color: #222;
 }
+
+.blogs ul li {
+    padding-bottom: 5px;
+    margin-bottom: 30px;
+    border-bottom: 2px dashed #ccc;
+}
+
+.blogs ul li:last-of-type {
+    border-bottom: none;
+}
