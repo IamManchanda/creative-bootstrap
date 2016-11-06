@@ -10,3 +10,5 @@ compress_html:
   comments:  ["<!-- ", " -->"]
   endings:   all
 permalink: /blogs/:year/:month/:day/:title/
+baseurl: /creative-bootstrap
+exclude: ['Readme.md']
