@@ -1,3 +1,6 @@
+---
+
+---
 (function() {
   function displaySearchResults(results, store) {
     var searchResults = document.getElementById('search-results');
@@ -7,7 +10,7 @@
 
       for (var i = 0; i < results.length; i++) {  // Iterate over the results
         var item = store[results[i].ref];
-        appendString += '<li><a href="' + '/creative-bootstrap' + item.url + '"><h3>' + item.title + '</h3></a>';
+        appendString += '<li><a href="' + '{{ site.baseurl }}' + item.url + '"><h3>' + item.title + '</h3></a>';
         appendString += '<p>' + item.content.substring(0, 190) + '...</p></li>';
       }
 
