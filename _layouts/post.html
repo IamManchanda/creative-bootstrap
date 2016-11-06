@@ -7,7 +7,17 @@ layout: page
   		<div class="col-md-8 col-md-offset-2">
 	    	<div class="row">
 	    		<div class="col-md-6">
-	    			<p class="pull-left">Category: {{ page.category }}</p>
+	    			<p class="pull-left">
+	    				Category: {{ page.category }} <br>
+	    				Read time: 
+							{% assign words = content | number_of_words %}
+							{% if words < 360 %}
+								1 min
+							{% else %}
+								{{ words | divided_by: 180 }} mins
+							{% endif %} 
+						read
+					</p>
 	    		</div>
 	    		<div class="col-md-6">
 	    			<p class="pull-right">Date: {{ page.date | date: "%d %B %Y" }}</p>

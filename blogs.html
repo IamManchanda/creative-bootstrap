@@ -17,7 +17,17 @@ description: Latest Blogs and updates from Creative Bootstrap
 							</h2>
 							<div class="row" style="margin-top: 30px;margin-bottom: 0px;">
 					    		<div class="col-md-6">
-					    			<p class="pull-left" style="margin-bottom: 0px;">Category: {{ post.category }}</p>
+					    			<p class="pull-left" style="margin-bottom: 0px;">
+					    				Category: {{ post.category }} <br>
+					    				Read time: 
+											{% assign words = post.content | number_of_words %}
+											{% if words < 360 %}
+												1 min
+											{% else %}
+												{{ words | divided_by: 180 }} mins
+											{% endif %} 
+										read
+					    			</p>
 					    		</div>
 					    		<div class="col-md-6">
 					    			<p class="pull-right" style="margin-bottom: 0px;">Date: {{ post.date | date: "%d %B %Y" }}</p>
