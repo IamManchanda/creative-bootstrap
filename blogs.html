@@ -1,5 +1,5 @@
 ---
-layout: page
+layout: search
 title: Blogs
 navigation_weight: 5
 permalink: /blogs/
@@ -8,11 +8,11 @@ description: Latest Blogs and updates from Creative Bootstrap
 <section class="blogs">
 	<div class="container">
 		<div class="row">
-			<div class="col-md-8 col-md-offset-2">
-				<ul style="list-style-type: none;padding: 0px;">
+			<div class="col-md-7">
+				<ul style="list-style-type: none;padding: 0px;" class="blog-posts">
 					{% for post in site.posts %}
 						<li>
-							<h2 class="text-center">
+							<h2 class="text-left" style="margin-top: 3px;">
 								<a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a> 
 							</h2>
 							<div class="row" style="margin-top: 30px;margin-bottom: 0px;">
@@ -30,6 +30,51 @@ description: Latest Blogs and updates from Creative Bootstrap
 					{% endfor %}
 				</ul>
 			</div>
+			<div class="col-md-5">
+				<div class="row">
+					<div class="col-md-11 col-md-offset-1" style="border: 1px dashed #ccc;">
+						<div class="row no-gutters" style="margin-top:0px;">
+							<div class="col-md-12">
+								<h3 style="font-size: 25px;">Search here for blogs</h3>
+							</div>
+						</div>
+						<form action="/blogs/" method="get" class="search-form">
+							<div class="form-group">
+								<div class="row no-gutters">
+									<div class="col-md-9 col-sm-8">
+										<input type="text" id="search-box" name="query" placeholder="Search blogs" class="form-control input-lg">
+									</div>
+									<div class="col-md-3 col-sm-4">
+										<div class="pull-right">
+									  		<input type="submit" value="search" class="btn btn-primary btn-lg">
+										</div>
+									  </div>
+								</div>
+							</div>
+						</form>
+						<div class="row">
+							<div class="col-md-11">
+								<ul id="search-results" style="list-style-type: none;padding:0 0 0 5px;"></ul>
+							</div>
+						</div>
+						<script>
+						  window.store = {
+						    {% for post in site.posts %}
+						      "{{ post.url | slugify }}": {
+						        "title": "{{ post.title | xml_escape }}",
+						        "author": "{{ post.author | xml_escape }}",
+						        "category": "{{ post.category | xml_escape }}",
+						        "content": {{ post.content | strip_html | strip_newlines | jsonify }},
+						        "url": "{{ post.url | xml_escape }}"
+						      }
+						      {% unless forloop.last %},{% endunless %}
+						    {% endfor %}
+						  };
+						</script>
+					</div>
+				</div>
+			</div>
 		</div>
+
 	</div>
 </section>

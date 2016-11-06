@@ -1,6 +1,6 @@
 ---
 layout: post
-title: My First Post!
+title: My First Post on how to go jekyll!!
 category: Tutorials
 description: Tutorial on how to edit posts
 ---
