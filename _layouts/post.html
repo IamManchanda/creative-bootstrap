@@ -9,15 +9,7 @@ layout: page
 	    		<div class="col-md-6">
 	    			<p class="pull-left">
 	    				Category: {{ page.category }} <br>
-	    				{% if page.comments %} 
-				      		Popularity: <a href="https://iammanchanda.github.io/creative-bootstrap/{{ page.url }}#disqus_thread">0 Comments</a>
-				      	{% endif %}
-					</p>
-	    		</div>
-	    		<div class="col-md-6">
-	    			<p class="pull-right">
-	    				Date: {{ page.date | date: "%d %B %Y" }} <br>
-				      	Read time: 
+	    				Read time: 
 							{% assign words = content | number_of_words %}
 							{% if words < 360 %}
 								1 min
@@ -25,6 +17,11 @@ layout: page
 								{{ words | divided_by: 180 }} mins
 							{% endif %} 
 						read
+					</p>
+	    		</div>
+	    		<div class="col-md-6">
+	    			<p class="pull-right">
+	    				Date: {{ page.date | date: "%d %B %Y" }}
 	    			</p>
 	    		</div>
 	    	</div>
