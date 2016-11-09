@@ -1,7 +1,8 @@
 ---
 layout: post
-title: My First Post on how to go jekyll!!
-category: Tutorials
+title: 'Tutorial on how to go jekyll!!'
+category:
+  - Tutorials
 description: Tutorial on how to edit posts
 ---
 You'll find this post in your `_posts` directory. Go ahead and edit it and re-build
