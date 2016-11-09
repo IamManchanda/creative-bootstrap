@@ -4,6 +4,7 @@ title: 'Tutorial on how to go jekyll!!'
 category:
   - Tutorials
 description: Tutorial on how to edit posts
+comments: true
 ---
 
 
