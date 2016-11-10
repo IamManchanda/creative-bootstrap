@@ -10,10 +10,6 @@ body {
     height: 100%;
 }
 
-body {
-    font-family: Merriweather,'Helvetica Neue',Arial,sans-serif;
-}
-
 hr {
     max-width: 50px;
     border-color: #f05f40;
